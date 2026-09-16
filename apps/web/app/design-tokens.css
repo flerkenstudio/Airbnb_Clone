@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Solstice Sanctuary — Design System Tokens
+   Extracted from inspiring modern/vibrant pattern & crafted for original UI
+   ========================================================================== */
+
+:root {
+  /* Key Colors */
+  --accent: #E61E4D;
+  --accent-deep: #B8183E;
+  --bg: #FFFFFF;
+  --surface: #FFFFFF;
+  --elevated: #EEEEEE;
+  --text: #222222;
+
+  /* Named Color Tokens */
+  --ink: #222222;
+  --muted: #6a6a6a;
+  --muted2: #717171;
+  --line: #dddddd;
+  --line-soft: #ebebeb;
+  --card-border: rgba(0, 0, 0, 0.08);
+  --rausch: #ff385c;
+  --grey100: #f7f7f7;
+  --grey200: #f2f2f2;
+  --grey300: #ebebeb;
+
+  /* Brand Moment Gradient */
+  --brand-gradient: linear-gradient(135deg, #CFE3C8 0%, #ACD3E6 50%, #E9F0E4 100%);
+  --brand-gradient-text: linear-gradient(135deg, #2b5c3f 0%, #1e4b6e 50%, #2f5439 100%);
+
+  /* Typography Scale */
+  --font-display: 100px;
+  --font-h1: 26px;
+  --font-h2: 22px;
+  --font-body: 16px;
+  --font-caption: 14px;
+
+  --lh-h1: 1.15;
+  --lh-h2: 1.18;
+  --lh-body: 1.5;
+
+  /* Radius Tokens */
+  --radius-base: 8px;
+  --radius-button: 40px;
+  --radius-card: 12px;
+  --radius-input: 6px;
+
+  /* Elevation Tokens */
+  --shadow-card: 0 6px 16px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 2px 4px rgba(0, 0, 0, 0.18);
+  --shadow-flat: 0 0 0 1px var(--card-border);
+
+  /* Motion Durations */
+  --motion-instant: 0.05s;
+  --motion-fast: 0.10s;
+  --motion-normal: 0.15s;
+  --motion-smooth: 0.18s;
+
+  /* Focus Ring */
+  --focus-ring: 2px solid rgb(34, 34, 34);
+  --focus-offset: 2px;
+}
+
+/* Base custom utilities */
+.btn-pill {
+  background-color: var(--elevated);
+  color: var(--ink);
+  font-weight: 400;
+  border-radius: var(--radius-button);
+  padding: 10px 20px;
+  transition: all var(--motion-normal) ease-in-out;
+}
+.btn-pill:hover {
+  background-color: var(--grey300);
+}
+.btn-pill:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #FFFFFF;
+  font-weight: 500;
+  border-radius: var(--radius-button);
+  padding: 10px 24px;
+  transition: all var(--motion-normal) ease-in-out;
+}
+.btn-primary:hover {
+  background-color: var(--accent-deep);
+}
+.btn-primary:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.card-subtle {
+  background-color: var(--surface);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-card);
+  padding: 24px;
+  transition: transform var(--motion-normal) ease, box-shadow var(--motion-normal) ease;
+}
+.card-subtle:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.input-token {
+  background-color: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-input);
+  padding: 8px 12px;
+  color: var(--ink);
+  font-size: 14px;
+  transition: border-color var(--motion-fast) ease;
+}
+.input-token:focus {
+  border-color: var(--ink);
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+.brand-moment-banner {
+  background: var(--brand-gradient);
+}
